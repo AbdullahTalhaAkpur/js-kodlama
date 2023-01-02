@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        // array destructing
+        let user = ["abdullah","akpur","adana","seyhan","ziyapaşa bulvarı"];
+
+        // let firstName = name[0];
+        // let lastName = name[1];
+
+        // let [firstName, lastName] = name;
+        //  let [firstName, lastName] = "Abdullah Akpur".split(" ");
+         let [firstName, lastName, ...addres] = user;
+
+
+        console.log(firstName, lastName, addres);
+
+        // object destructing
+        let urun = {
+            marka:  "Samsung",
+            model:  "Galaxy A3",
+            fiyat:  5000
+        }
+       
+        function urunGoster(obj) {
+            let {marka, model, fiyat = 0, satisdurumu = false} = obj;
+            console.log(marka, model, fiyat, satisdurumu);
+        }
+
+        urunGoster(urun);
+
+    </script>
+</body>
+</html>

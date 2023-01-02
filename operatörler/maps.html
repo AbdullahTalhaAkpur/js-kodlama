@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+    <script>
+        
+       const ogrenciler = new Map();
+
+        ogrenciler.set(1, "zeynep kol");
+        ogrenciler.set("4563433821", "kamil can");
+        ogrenciler.set(true, "buse");
+
+        console.log(ogrenciler.get(1));
+        console.log(ogrenciler.get("4563433821"));
+        console.log(ogrenciler.get(true));
+
+        let sonuc;
+
+        sonuc = ogrenciler.size;
+        sonuc = ogrenciler.has(2);
+        // ogrenciler.delete(1);
+        sonuc = ogrenciler.size;
+        // ogrenciler.clear();
+
+        // for(let x of ogrenciler.keys()) {
+        //     console.log(x);
+        // }
+
+        // for(let x of ogrenciler.values()) {
+        //     console.log(x);
+        // }
+    
+        for(let x of ogrenciler.entries()) {
+            console.log(x);
+        }
+
+
+    </script>    
+</body>
+</html>

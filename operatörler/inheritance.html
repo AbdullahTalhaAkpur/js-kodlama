@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+    // Kisi => k1, k2
+    // Ogrenci => o1, o2
+    // Ogretmen   
+
+       class Kisi {
+         constructor(ad, dogumYili) {
+            console.log("kisi constructor");
+            this.ad = ad;
+            this.dogumYili = dogumYili;
+         }
+
+         yasHesapla() {
+            let tarih = new Date().getFullYear();
+            return tarih - this.dogumYili;
+         }
+         kendiniTanıt() {
+            return `benim adım ${this.ad}`;
+         }
+       }    
+
+       // child
+       class Ogrenci extends Kisi {
+          constructor(ad, dogumYili, okulnumarası) {
+            console.log("öğrenci constructor");
+            super(ad, dogumYili);
+            this.okulnumarası = okulnumarası;
+          }
+          dersCalis() {
+            return `${this.ad} ders çalışıyor` ;
+          }
+          kendiniTanıt() {
+            return `benim adım ${this.ad} ve okul numaram ${this.okulnumarası}`;
+       }
+    }
+
+        class Ogretmen extends Kisi {
+            constructor(ad, dogumYili, brans) {
+                super(ad, dogumYili);
+                this.brans = brans;
+            }
+
+            dersAnlat() {
+                return `${this.ad} fizik hocası`;
+            }
+            kendiniTanıt() {
+                return `benim adım ${this.ad} ve branşım fizik`;
+            }
+        }
+
+       let kisi = new Kisi("kerem", 1990);
+       let ogrenci = new Ogrenci("sıla", 2000, 1567);
+
+       let Ogretmen =  new Ogretmen("serap öztürk", "FİZİK ÖĞRETMENİ");
+       
+
+    //    console.log(kisi.yasHesapla());
+    //    console.log(ogrenci.yasHesapla());
+    //    console.log(ogrenci.dersCalis());
+
+      console.log(kisi.kendiniTanıt());
+      console.log(ogrenci.kendiniTanıt());
+      console.log()
+
+
+    </script>
+</body>
+</html>

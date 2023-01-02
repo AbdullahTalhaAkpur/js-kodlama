@@ -1,0 +1,1 @@
+clearBtn.addEventListener("click", clearItems);
